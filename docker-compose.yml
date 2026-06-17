@@ -1,10 +1,10 @@
 version: '3.8'
 
 services:
-  web:
+  web1:
     build: .
     image: navinvenkat/flaskwebproject1:latest
-    container_name: flaskapp
+    container_name: flaskapp1
     ports:
       - "8000:8000"
     environment:
@@ -12,4 +12,19 @@ services:
       - FLASK_ENV=production
       - SERVER_HOST=0.0.0.0
       - SERVER_PORT=8000
+      - SERVER_ID=1
+    restart: always
+
+  web2:
+    build: .
+    image: navinvenkat/flaskwebproject1:latest
+    container_name: flaskapp2
+    ports:
+      - "8001:8000"
+    environment:
+      - FLASK_APP=runserver.py
+      - FLASK_ENV=production
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=8000
+      - SERVER_ID=2
     restart: always

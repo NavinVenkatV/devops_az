@@ -33,6 +33,6 @@ jobs:
           username: azureuser
           key: ${{ secrets.AZURE_SSH_KEY }}
           script: |
-            cd /home/azureuser/app
-            docker compose pull
-            docker compose up -d --remove-orphans
+            cd /home/azureuser/devops_az
+            git pull origin main
+            sudo docker-compose up -d --build

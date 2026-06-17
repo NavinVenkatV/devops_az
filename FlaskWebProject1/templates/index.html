@@ -1,8 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
 
+{% if server_id == '1' %}
+<div class="alert alert-info text-center">
+    <strong>🟢 Server 1 is handling your request</strong>
+</div>
+{% else %}
+<div class="alert alert-warning text-center">
+    <strong>🟠 Server 2 is handling your request</strong>
+</div>
+{% endif %}
+
 <div class="jumbotron">
-    <h1>Welcome, Navin Venkat Venkatesa 👋</h1>
+    <h1>Welcome, Navin Venkat Venkatesan 👋</h1>
     <p class="lead">Student Dashboard — {{ now.strftime('%B %d, %Y  %I:%M %p') }}</p>
 </div>
 
