@@ -23,9 +23,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          
+
           push: true
-          tags: navinvenkat/flaskwebproject1:latest
+          tags: vnavinvenkat/flaskwebproject1:latest
 
       - name: SSH into Azure VM and deploy
         uses: appleboy/ssh-action@v1.0.0
