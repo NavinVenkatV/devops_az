@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Welcome, Navin Venkat Venkatesa 👋</h1>
+    <p class="lead">Student Dashboard — {{ now.strftime('%B %d, %Y  %I:%M %p') }}</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title">Student Information</h3></div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr><th>Name</th><td>Navin Venkat Venkatesan</td></tr>
+                    <tr><th>Student ID</th><td>NVV-2024-001</td></tr>
+                    <tr><th>Department</th><td>Computer Science & Engineering</td></tr>
+                    <tr><th>Year</th><td>3rd Year</td></tr>
+                    <tr><th>Semester</th><td>6th Semester</td></tr>
+                    <tr><th>Email</th><td>navin.venkatesan@student.edu</td></tr>
+                    <tr><th>CGPA</th><td>8.7 / 10.0</td></tr>
+                    <tr><th>Status</th><td><span class="label label-success">Active</span></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title">Current Courses</h3></div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr><th>Code</th><th>Subject</th><th>Credits</th></tr>
+                    <tr><td>CS601</td><td>Cloud Computing</td><td>4</td></tr>
+                    <tr><td>CS602</td><td>Machine Learning</td><td>4</td></tr>
+                    <tr><td>CS603</td><td>Web Technologies</td><td>3</td></tr>
+                    <tr><td>CS604</td><td>Database Systems</td><td>3</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+    <div class="col-md-3">
+        <div class="panel panel-primary text-center">
+            <div class="panel-body">
+                <h2>📋</h2>
+                <h4>Assignments</h4>
+                <p>View and submit your pending assignments</p>
+                <a href="/assignments" class="btn btn-primary btn-block">Go to Assignments</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-success text-center">
+            <div class="panel-body">
+                <h2>📊</h2>
+                <h4>Grades</h4>
+                <p>Check your marks and performance report</p>
+                <a href="/grades" class="btn btn-success btn-block">View Grades</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-warning text-center">
+            <div class="panel-body">
+                <h2>📅</h2>
+                <h4>Timetable</h4>
+                <p>View your weekly class schedule</p>
+                <a href="/timetable" class="btn btn-warning btn-block">View Timetable</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-danger text-center">
+            <div class="panel-body">
+                <h2>📁</h2>
+                <h4>Projects</h4>
+                <p>Manage and track your ongoing projects</p>
+                <a href="/projects" class="btn btn-danger btn-block">View Projects</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
