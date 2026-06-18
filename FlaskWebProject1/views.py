@@ -6,6 +6,13 @@ from flask import render_template
 from FlaskWebProject1 import app
 import os
 
+@app.route('/version')
+def version():
+    return {
+        "version": "1.0",
+        "server_id": os.environ.get('SERVER_ID', '1')
+    }
+
 @app.route('/')
 @app.route('/home')
 def home():
